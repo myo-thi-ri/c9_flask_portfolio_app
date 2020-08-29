@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect
 import datetime
 import pytz # timezone 
-import requests
 import os
 
 
@@ -15,7 +14,7 @@ def home_page():
 
 @app.route('/<name>')
 def profile(name):
-	new_name = name + "likes to eat mangos."
+	new_name = name + " is the best person on this universe."
 	return render_template('index.html', name=new_name)
 
 
